@@ -1,0 +1,51 @@
+public static void cn4() {
+        Scanner sc = new Scanner(System.in);
+        Scanner sc1 = new Scanner(System.in);
+        Calendar nam = Calendar.getInstance();
+        String tenMe, tenNy, nam = "Nam", nu = "Nu";
+        int nsBan, nsNy, tuoiBan, tuoiNy, banCao, nyCao, gtBan, gtNy;
+        System.out.println("Nhap ten cua ban: ");
+        tenMe = sc.nextLine();
+        System.out.println("Nam sinh:");
+        nsBan = sc.nextInt();
+        System.out.println("Gioi tinh(Nam:0, Nu:1):");
+        gtBan = sc.nextInt();
+        System.out.println("Chieu cao: ");
+        banCao = sc.nextInt();
+        System.out.println("Nhap ten nguoi yeu: ");
+        tenNy = sc1.nextLine();
+        System.out.println("Nam sinh:");
+        nsNy = sc.nextInt();
+        System.out.println("Gioi tinh(Nam:0, Nu:1):");
+        gtNy = sc.nextInt();
+        System.out.println("Chieu cao: ");
+        nyCao = sc.nextInt();
+        tuoiBan = (year.get(Calendar.YEAR)) - nsBan;
+        tuoiNy = (year.get(Calendar.YEAR)) - nsNy;
+        System.out.println("Ten nguoi yeu: " + tenNy + "");
+        System.out.println("Nam sinh: " + nsNy + "");
+        if (tuoiBan > tuoiNy) {
+            System.out.println("Tuoi nguoi yeu: " + tuoiNy + ". Kem tuoi ban.");
+        } else if (tuoiBan < tuoiNy) {
+            System.out.println("Tuoi nguoi yeu: " + tuoiNy + ". Hon tuoi ban ");
+        } else {
+            System.out.println("Tuoi nguoi yeu: " + tuoiNy + ". Hai ban bang tuoi.");
+        }
+        if (gtNy == 0) {
+            System.out.print("Gioi tinh: " + nam + ". ");
+        } else if (gtNy == 1) {
+            System.out.print("Gioi tinh: " + nu + ". ");
+        }
+        if (gtBan == gtNy) {
+            System.out.println("Hai ban la cung gioi tinh.");
+        } else if (gtMe != gtNy) {
+            System.out.println("Hai ban khac gioi.");
+        }
+        if (banCao > nyCao) {
+            System.out.println("Chieu cao: " + nyCao + "cm. Ban cao hon.");
+        } else if (nyCao > banCao) {
+            System.out.println("Chieu cao: " + nyCao + "cm. Ban thap hon.");
+        } else {
+            System.out.println("Chieu cao: " + nyCao + "cm. Hai ban co chieu cao bang nhau.");
+        }
+    }
